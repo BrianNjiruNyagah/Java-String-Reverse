@@ -1,0 +1,34 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        
+        Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        String  check = "";
+
+        //eliminates if there is only one word
+        if(A.length()==1){
+                check="Yes";
+                }else{
+                    //splits the word into half to see if one half mirrors the other
+                    for(int i=1;i<A.length()/2;i++){
+                        
+                        if(A.charAt(i-1)==(A.charAt(A.length()-i))){
+                            check = "Yes";
+                            }else{
+                                check="No";
+                                break;
+                                }
+                        }
+                    }
+
+        System.out.println(check);
+        
+    }
+}
+
+
+
